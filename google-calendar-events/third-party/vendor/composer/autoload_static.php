@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
+class ComposerStaticInita7838c7fa5f53628b7c5c99a6aab36cb
 {
     public static $files = array (
         '4b1964b006cd3cb15789beb45368cd67' => __DIR__ . '/../..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -58,7 +58,7 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Carbon\\Language' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/Language.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\Laravel\\ServiceProvider' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\LazyTranslator' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/TranslatorWeakType.php',
-        'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\LazyMessageFormatter' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/MessageFormatter/MessageFormatterMapperStrongType.php',
+        'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\LazyMessageFormatter' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/MessageFormatter/MessageFormatterMapperWeakType.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\MessageFormatterMapper' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/MessageFormatter/MessageFormatterMapper.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractMacro' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/AbstractMacro.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractReflectionMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/AbstractMacroBuiltin.php',
@@ -112,6 +112,7 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Google\\Auth\\CacheTrait' => __DIR__ . '/../..' . '/google/auth/src/CacheTrait.php',
         'SimpleCalendar\\plugin_deps\\Google\\Auth\\Cache\\FileSystemCacheItemPool' => __DIR__ . '/../..' . '/google/auth/src/Cache/FileSystemCacheItemPool.php',
         'SimpleCalendar\\plugin_deps\\Google\\Auth\\Cache\\InvalidArgumentException' => __DIR__ . '/../..' . '/google/auth/src/Cache/InvalidArgumentException.php',
+        'SimpleCalendar\\plugin_deps\\Google\\Auth\\Cache\\Item' => __DIR__ . '/../..' . '/google/auth/src/Cache/Item.php',
         'SimpleCalendar\\plugin_deps\\Google\\Auth\\Cache\\MemoryCacheItemPool' => __DIR__ . '/../..' . '/google/auth/src/Cache/MemoryCacheItemPool.php',
         'SimpleCalendar\\plugin_deps\\Google\\Auth\\Cache\\SysVCacheItemPool' => __DIR__ . '/../..' . '/google/auth/src/Cache/SysVCacheItemPool.php',
         'SimpleCalendar\\plugin_deps\\Google\\Auth\\Cache\\TypedItem' => __DIR__ . '/../..' . '/google/auth/src/Cache/TypedItem.php',
@@ -231,8 +232,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\App' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/App.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\AppIcons' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/AppIcons.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\AppList' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/AppList.php',
-        'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Approval' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Approval.php',
-        'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\ApprovalList' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/ApprovalList.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Change' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Change.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\ChangeList' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/ChangeList.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Channel' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Channel.php',
@@ -241,7 +240,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\CommentQuotedFileContent' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/CommentQuotedFileContent.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\ContentRestriction' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/ContentRestriction.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\DownloadRestriction' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/DownloadRestriction.php',
-        'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\DownloadRestrictionsMetadata' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/DownloadRestrictionsMetadata.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Drive' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Drive.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\DriveBackgroundImageFile' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/DriveBackgroundImageFile.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\DriveCapabilities' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/DriveCapabilities.php',
@@ -278,7 +276,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\ResolveAccessProposalRequest' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/ResolveAccessProposalRequest.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Resource\\About' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Resource/About.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Resource\\Accessproposals' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Resource/Accessproposals.php',
-        'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Resource\\Approvals' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Resource/Approvals.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Resource\\Apps' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Resource/Apps.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Resource\\Changes' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Resource/Changes.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Resource\\Channels' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Resource/Channels.php',
@@ -292,7 +289,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Resource\\Replies' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Resource/Replies.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Resource\\Revisions' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Resource/Revisions.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Resource\\Teamdrives' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Resource/Teamdrives.php',
-        'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\ReviewerResponse' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/ReviewerResponse.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\Revision' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/Revision.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\RevisionList' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/RevisionList.php',
         'SimpleCalendar\\plugin_deps\\Google\\Service\\Drive\\StartPageToken' => __DIR__ . '/../..' . '/google/apiclient-services/src/Drive/StartPageToken.php',
@@ -418,7 +414,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Utils' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Utils.php',
         'SimpleCalendar\\plugin_deps\\Mexitek\\PHPColors\\Color' => __DIR__ . '/../..' . '/mexitek/phpcolors/src/Mexitek/PHPColors/Color.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Attribute\\AsMonologProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
-        'SimpleCalendar\\plugin_deps\\Monolog\\Attribute\\WithMonologChannel' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Attribute/WithMonologChannel.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\DateTimeImmutable' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\ErrorHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Formatter\\ChromePHPFormatter' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',
@@ -438,7 +433,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Monolog\\Formatter\\MongoDBFormatter' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Formatter/MongoDBFormatter.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Formatter\\NormalizerFormatter' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Formatter\\ScalarFormatter' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Formatter/ScalarFormatter.php',
-        'SimpleCalendar\\plugin_deps\\Monolog\\Formatter\\SyslogFormatter' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Formatter/SyslogFormatter.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Formatter\\WildfireFormatter' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Formatter/WildfireFormatter.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\AbstractHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/AbstractHandler.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\AbstractProcessingHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php',
@@ -504,6 +498,7 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\SocketHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/SocketHandler.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\SqsHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/SqsHandler.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\StreamHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/StreamHandler.php',
+        'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\SwiftMailerHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/SwiftMailerHandler.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\SymfonyMailerHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/SymfonyMailerHandler.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\SyslogHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/SyslogHandler.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\SyslogUdpHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php',
@@ -513,15 +508,11 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\WebRequestRecognizerTrait' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/WebRequestRecognizerTrait.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\WhatFailureGroupHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/WhatFailureGroupHandler.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Handler\\ZendMonitorHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Handler/ZendMonitorHandler.php',
-        'SimpleCalendar\\plugin_deps\\Monolog\\JsonSerializableDateTimeImmutable' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/JsonSerializableDateTimeImmutable.php',
-        'SimpleCalendar\\plugin_deps\\Monolog\\Level' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Level.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\LogRecord' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/LogRecord.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Logger' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Logger.php',
-        'SimpleCalendar\\plugin_deps\\Monolog\\Processor\\ClosureContextProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Processor/ClosureContextProcessor.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Processor\\GitProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Processor/GitProcessor.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Processor\\HostnameProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Processor/HostnameProcessor.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Processor\\IntrospectionProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Processor/IntrospectionProcessor.php',
-        'SimpleCalendar\\plugin_deps\\Monolog\\Processor\\LoadAverageProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Processor/LoadAverageProcessor.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Processor\\MemoryPeakUsageProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Processor/MemoryPeakUsageProcessor.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Processor\\MemoryProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Processor/MemoryProcessor.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Processor\\MemoryUsageProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php',
@@ -535,7 +526,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Monolog\\Registry' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Registry.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\ResettableInterface' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/ResettableInterface.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\SignalHandler' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/SignalHandler.php',
-        'SimpleCalendar\\plugin_deps\\Monolog\\Test\\MonologTestCase' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Test/MonologTestCase.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Test\\TestCase' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Test/TestCase.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Utils' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Utils.php',
         'SimpleCalendar\\plugin_deps\\Parsedown' => __DIR__ . '/../..' . '/erusev/parsedown/Parsedown.php',
@@ -569,7 +559,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Psr\\Log\\LoggerInterface' => __DIR__ . '/../..' . '/psr/log/src/LoggerInterface.php',
         'SimpleCalendar\\plugin_deps\\Psr\\Log\\LoggerTrait' => __DIR__ . '/../..' . '/psr/log/src/LoggerTrait.php',
         'SimpleCalendar\\plugin_deps\\Psr\\Log\\NullLogger' => __DIR__ . '/../..' . '/psr/log/src/NullLogger.php',
-        'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\CatalogueMetadataAwareInterface' => __DIR__ . '/../..' . '/symfony/translation/CatalogueMetadataAwareInterface.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Catalogue\\AbstractOperation' => __DIR__ . '/../..' . '/symfony/translation/Catalogue/AbstractOperation.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Catalogue\\MergeOperation' => __DIR__ . '/../..' . '/symfony/translation/Catalogue/MergeOperation.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Catalogue\\OperationInterface' => __DIR__ . '/../..' . '/symfony/translation/Catalogue/OperationInterface.php',
@@ -580,8 +569,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Command\\XliffLintCommand' => __DIR__ . '/../..' . '/symfony/translation/Command/XliffLintCommand.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\DataCollectorTranslator' => __DIR__ . '/../..' . '/symfony/translation/DataCollectorTranslator.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\DataCollector\\TranslationDataCollector' => __DIR__ . '/../..' . '/symfony/translation/DataCollector/TranslationDataCollector.php',
-        'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\DependencyInjection\\DataCollectorTranslatorPass' => __DIR__ . '/../..' . '/symfony/translation/DependencyInjection/DataCollectorTranslatorPass.php',
-        'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\DependencyInjection\\LoggingTranslatorPass' => __DIR__ . '/../..' . '/symfony/translation/DependencyInjection/LoggingTranslatorPass.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\DependencyInjection\\TranslationDumperPass' => __DIR__ . '/../..' . '/symfony/translation/DependencyInjection/TranslationDumperPass.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\DependencyInjection\\TranslationExtractorPass' => __DIR__ . '/../..' . '/symfony/translation/DependencyInjection/TranslationExtractorPass.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\DependencyInjection\\TranslatorPass' => __DIR__ . '/../..' . '/symfony/translation/DependencyInjection/TranslatorPass.php',
@@ -612,13 +599,8 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\AbstractFileExtractor' => __DIR__ . '/../..' . '/symfony/translation/Extractor/AbstractFileExtractor.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\ChainExtractor' => __DIR__ . '/../..' . '/symfony/translation/Extractor/ChainExtractor.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\ExtractorInterface' => __DIR__ . '/../..' . '/symfony/translation/Extractor/ExtractorInterface.php',
-        'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\PhpAstExtractor' => __DIR__ . '/../..' . '/symfony/translation/Extractor/PhpAstExtractor.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\PhpExtractor' => __DIR__ . '/../..' . '/symfony/translation/Extractor/PhpExtractor.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\PhpStringTokenParser' => __DIR__ . '/../..' . '/symfony/translation/Extractor/PhpStringTokenParser.php',
-        'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\Visitor\\AbstractVisitor' => __DIR__ . '/../..' . '/symfony/translation/Extractor/Visitor/AbstractVisitor.php',
-        'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\Visitor\\ConstraintVisitor' => __DIR__ . '/../..' . '/symfony/translation/Extractor/Visitor/ConstraintVisitor.php',
-        'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\Visitor\\TransMethodVisitor' => __DIR__ . '/../..' . '/symfony/translation/Extractor/Visitor/TransMethodVisitor.php',
-        'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Extractor\\Visitor\\TranslatableMessageVisitor' => __DIR__ . '/../..' . '/symfony/translation/Extractor/Visitor/TranslatableMessageVisitor.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Formatter\\IntlFormatter' => __DIR__ . '/../..' . '/symfony/translation/Formatter/IntlFormatter.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Formatter\\IntlFormatterInterface' => __DIR__ . '/../..' . '/symfony/translation/Formatter/IntlFormatterInterface.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Formatter\\MessageFormatter' => __DIR__ . '/../..' . '/symfony/translation/Formatter/MessageFormatter.php',
@@ -638,7 +620,6 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Loader\\QtFileLoader' => __DIR__ . '/../..' . '/symfony/translation/Loader/QtFileLoader.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Loader\\XliffFileLoader' => __DIR__ . '/../..' . '/symfony/translation/Loader/XliffFileLoader.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\Loader\\YamlFileLoader' => __DIR__ . '/../..' . '/symfony/translation/Loader/YamlFileLoader.php',
-        'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\LocaleSwitcher' => __DIR__ . '/../..' . '/symfony/translation/LocaleSwitcher.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\LoggingTranslator' => __DIR__ . '/../..' . '/symfony/translation/LoggingTranslator.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\MessageCatalogue' => __DIR__ . '/../..' . '/symfony/translation/MessageCatalogue.php',
         'SimpleCalendar\\plugin_deps\\Symfony\\Component\\Translation\\MessageCatalogueInterface' => __DIR__ . '/../..' . '/symfony/translation/MessageCatalogueInterface.php',
@@ -681,7 +662,7 @@ class ComposerStaticInite0cc6262fdf685e96871e03233e2382f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInite0cc6262fdf685e96871e03233e2382f::$classMap;
+            $loader->classMap = ComposerStaticInita7838c7fa5f53628b7c5c99a6aab36cb::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitccf8eae8c1d6a4d101f92ea63aa5a996
+class ComposerStaticInita83f390a209c27af58daf9eb7058f0b3
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -19,6 +19,7 @@ class ComposerStaticInitccf8eae8c1d6a4d101f92ea63aa5a996
         'SimpleCalendar\\Admin\\Ajax' => __DIR__ . '/../..' . '/admin/ajax.php',
         'SimpleCalendar\\Admin\\Assets' => __DIR__ . '/../..' . '/admin/assets.php',
         'SimpleCalendar\\Admin\\Bulk_Actions' => __DIR__ . '/../..' . '/admin/bulk-actions.php',
+        'SimpleCalendar\\Admin\\Connect_Menu' => __DIR__ . '/../..' . '/admin/connect-menu.php',
         'SimpleCalendar\\Admin\\Fields\\Checkbox' => __DIR__ . '/../..' . '/admin/fields/checkbox.php',
         'SimpleCalendar\\Admin\\Fields\\Date_Picker' => __DIR__ . '/../..' . '/admin/fields/date-picker.php',
         'SimpleCalendar\\Admin\\Fields\\Datetime_Format' => __DIR__ . '/../..' . '/admin/fields/datetime-format.php',
@@ -47,7 +48,6 @@ class ComposerStaticInitccf8eae8c1d6a4d101f92ea63aa5a996
         'SimpleCalendar\\Admin\\Pages\\System_Status' => __DIR__ . '/../..' . '/admin/pages/system-status.php',
         'SimpleCalendar\\Admin\\Post_Types' => __DIR__ . '/../..' . '/admin/post-types.php',
         'SimpleCalendar\\Admin\\Updater' => __DIR__ . '/../..' . '/admin/updater.php',
-        'SimpleCalendar\\Admin\\Welcome' => __DIR__ . '/../..' . '/admin/welcome.php',
         'SimpleCalendar\\Ajax' => __DIR__ . '/../..' . '/ajax.php',
         'SimpleCalendar\\Assets' => __DIR__ . '/../..' . '/assets.php',
         'SimpleCalendar\\Browser' => __DIR__ . '/../..' . '/browser.php',
@@ -80,7 +80,7 @@ class ComposerStaticInitccf8eae8c1d6a4d101f92ea63aa5a996
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitccf8eae8c1d6a4d101f92ea63aa5a996::$classMap;
+            $loader->classMap = ComposerStaticInita83f390a209c27af58daf9eb7058f0b3::$classMap;
 
         }, null, ClassLoader::class);
     }
