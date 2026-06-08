@@ -27,6 +27,9 @@ trait MessageTrait
      */
     public function withProtocolVersion($version): MessageInterface
     {
+        if (!\is_string($version)) {
+            \SimpleCalendar\plugin_deps\trigger_deprecation('guzzlehttp/psr7', '2.11', 'Passing %s to MessageInterface::withProtocolVersion() is deprecated; guzzlehttp/psr7 3.0 requires string.', \get_debug_type($version));
+        }
         if ($this->protocol === $version) {
             return $this;
         }
@@ -61,6 +64,13 @@ trait MessageTrait
     public function withHeader($header, $value): MessageInterface
     {
         $this->assertHeader($header);
+        $values = \is_array($value) ? $value : [$value];
+        foreach ($values as $item) {
+            if (!\is_string($item) && (\is_scalar($item) || $item === null)) {
+                \SimpleCalendar\plugin_deps\trigger_deprecation('guzzlehttp/psr7', '2.11', 'Passing %s to MessageInterface::withHeader() is deprecated; guzzlehttp/psr7 3.0 requires string|string[].', \get_debug_type($item));
+                break;
+            }
+        }
         $value = $this->normalizeHeaderValue($value);
         $normalized = strtolower($header);
         $new = clone $this;
@@ -77,6 +87,13 @@ trait MessageTrait
     public function withAddedHeader($header, $value): MessageInterface
     {
         $this->assertHeader($header);
+        $values = \is_array($value) ? $value : [$value];
+        foreach ($values as $item) {
+            if (!\is_string($item) && (\is_scalar($item) || $item === null)) {
+                \SimpleCalendar\plugin_deps\trigger_deprecation('guzzlehttp/psr7', '2.11', 'Passing %s to MessageInterface::withAddedHeader() is deprecated; guzzlehttp/psr7 3.0 requires string|string[].', \get_debug_type($item));
+                break;
+            }
+        }
         $value = $this->normalizeHeaderValue($value);
         $normalized = strtolower($header);
         $new = clone $this;
@@ -132,6 +149,13 @@ trait MessageTrait
             // Numeric array keys are converted to int by PHP.
             $header = (string) $header;
             $this->assertHeader($header);
+            $values = \is_array($value) ? $value : [$value];
+            foreach ($values as $item) {
+                if (!\is_string($item) && (\is_scalar($item) || $item === null)) {
+                    \SimpleCalendar\plugin_deps\trigger_deprecation('guzzlehttp/psr7', '2.11', 'Passing %s to %s::__construct() is deprecated; guzzlehttp/psr7 3.0 requires string|string[].', \get_debug_type($item), static::class);
+                    break;
+                }
+            }
             $value = $this->normalizeHeaderValue($value);
             $normalized = strtolower($header);
             if (isset($this->headerNames[$normalized])) {
@@ -150,6 +174,9 @@ trait MessageTrait
      */
     private function normalizeHeaderValue($value): array
     {
+        if (is_array($value) && $value === []) {
+            \SimpleCalendar\plugin_deps\trigger_deprecation('guzzlehttp/psr7', '2.11', 'Passing an empty array as a header value is deprecated; guzzlehttp/psr7 3.0 rejects empty header value arrays.');
+        }
         if (!is_array($value)) {
             return $this->trimAndValidateHeaderValues([$value]);
         }

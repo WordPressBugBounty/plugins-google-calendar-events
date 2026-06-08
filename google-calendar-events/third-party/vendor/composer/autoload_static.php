@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita7838c7fa5f53628b7c5c99a6aab36cb
+class ComposerStaticInit68ee2a702a35066de3dc9f75baa3b871
 {
     public static $files = array (
         '4b1964b006cd3cb15789beb45368cd67' => __DIR__ . '/../..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -350,6 +350,7 @@ class ComposerStaticInita7838c7fa5f53628b7c5c99a6aab36cb
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\CurlFactoryInterface' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/CurlFactoryInterface.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\CurlHandler' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/CurlHandler.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\CurlMultiHandler' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php',
+        'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\CurlShareHandleState' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/CurlShareHandleState.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\EasyHandle' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/EasyHandle.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\HeaderProcessor' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/HeaderProcessor.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\MockHandler' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/MockHandler.php',
@@ -396,6 +397,7 @@ class ComposerStaticInita7838c7fa5f53628b7c5c99a6aab36cb
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Psr7\\Query' => __DIR__ . '/../..' . '/guzzlehttp/psr7/src/Query.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Psr7\\Request' => __DIR__ . '/../..' . '/guzzlehttp/psr7/src/Request.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Psr7\\Response' => __DIR__ . '/../..' . '/guzzlehttp/psr7/src/Response.php',
+        'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Psr7\\Rfc3986' => __DIR__ . '/../..' . '/guzzlehttp/psr7/src/Rfc3986.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Psr7\\Rfc7230' => __DIR__ . '/../..' . '/guzzlehttp/psr7/src/Rfc7230.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Psr7\\ServerRequest' => __DIR__ . '/../..' . '/guzzlehttp/psr7/src/ServerRequest.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Psr7\\Stream' => __DIR__ . '/../..' . '/guzzlehttp/psr7/src/Stream.php',
@@ -411,6 +413,7 @@ class ComposerStaticInita7838c7fa5f53628b7c5c99a6aab36cb
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\RequestOptions' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/RequestOptions.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\RetryMiddleware' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/RetryMiddleware.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\TransferStats' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/TransferStats.php',
+        'SimpleCalendar\\plugin_deps\\GuzzleHttp\\TransportSharing' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/TransportSharing.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Utils' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Utils.php',
         'SimpleCalendar\\plugin_deps\\Mexitek\\PHPColors\\Color' => __DIR__ . '/../..' . '/mexitek/phpcolors/src/Mexitek/PHPColors/Color.php',
         'SimpleCalendar\\plugin_deps\\Monolog\\Attribute\\AsMonologProcessor' => __DIR__ . '/../..' . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
@@ -662,7 +665,7 @@ class ComposerStaticInita7838c7fa5f53628b7c5c99a6aab36cb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInita7838c7fa5f53628b7c5c99a6aab36cb::$classMap;
+            $loader->classMap = ComposerStaticInit68ee2a702a35066de3dc9f75baa3b871::$classMap;
 
         }, null, ClassLoader::class);
     }
