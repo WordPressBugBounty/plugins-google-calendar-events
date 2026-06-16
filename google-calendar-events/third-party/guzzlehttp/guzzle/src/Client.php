@@ -666,7 +666,7 @@ class Client implements ClientInterface, \SimpleCalendar\plugin_deps\Psr\Http\Cl
             if (isset($options['multipart'])) {
                 throw new InvalidArgumentException('You cannot use ' . 'form_params and multipart at the same time. Use the ' . 'form_params option if you want to send application/' . 'x-www-form-urlencoded requests, and the multipart ' . 'option to send multipart/form-data requests.');
             }
-            $options['body'] = \http_build_query($options['form_params'], '', '&');
+            $options['body'] = \http_build_query(self::normalizeNonFiniteFloats($options['form_params']), '', '&');
             unset($options['form_params']);
             // Ensure that we don't have the header in different case and set the new value.
             $options['_conditional'] = Psr7\Utils::caselessRemove(['Content-Type'], $options['_conditional']);
@@ -718,7 +718,7 @@ class Client implements ClientInterface, \SimpleCalendar\plugin_deps\Psr\Http\Cl
         if (isset($options['query'])) {
             $value = $options['query'];
             if (\is_array($value)) {
-                $value = \http_build_query($value, '', '&', \PHP_QUERY_RFC3986);
+                $value = \http_build_query(self::normalizeNonFiniteFloats($value), '', '&', \PHP_QUERY_RFC3986);
             }
             if (!\is_string($value)) {
                 throw new InvalidArgumentException('query must be a string or array');
@@ -776,6 +776,9 @@ class Client implements ClientInterface, \SimpleCalendar\plugin_deps\Psr\Http\Cl
                 }
                 foreach ($value as $index => $item) {
                     if ($item === null || !\is_string($item) && \is_scalar($item)) {
+                        if (\is_float($item) && !\is_finite($item)) {
+                            $item = \is_nan($item) ? 'NAN' : ($item > 0 ? 'INF' : '-INF');
+                        }
                         $value[$index] = (string) $item;
                     }
                 }
@@ -783,10 +786,28 @@ class Client implements ClientInterface, \SimpleCalendar\plugin_deps\Psr\Http\Cl
                 continue;
             }
             if ($value === null || !\is_string($value) && \is_scalar($value)) {
+                if (\is_float($value) && !\is_finite($value)) {
+                    $value = \is_nan($value) ? 'NAN' : ($value > 0 ? 'INF' : '-INF');
+                }
                 $headers[$name] = (string) $value;
             }
         }
         return $droppedHeaderNames;
+    }
+    /**
+     * Converts non-finite floats in the array to the strings PHP coerces
+     * them to, as implicit coercion of NAN emits a warning on PHP 8.5.
+     */
+    private static function normalizeNonFiniteFloats(array $values): array
+    {
+        foreach ($values as $key => $value) {
+            if (\is_array($value)) {
+                $values[$key] = self::normalizeNonFiniteFloats($value);
+            } elseif (\is_float($value) && !\is_finite($value)) {
+                $values[$key] = \is_nan($value) ? 'NAN' : ($value > 0 ? 'INF' : '-INF');
+            }
+        }
+        return $values;
     }
     /**
      * @param string|int|float $version
