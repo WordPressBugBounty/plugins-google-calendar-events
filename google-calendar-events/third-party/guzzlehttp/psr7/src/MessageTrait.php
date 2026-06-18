@@ -202,6 +202,11 @@ trait MessageTrait
             if (!is_scalar($value) && null !== $value) {
                 throw new \InvalidArgumentException(sprintf('Header value must be scalar or null but %s provided.', is_object($value) ? get_class($value) : gettype($value)));
             }
+            // Convert non-finite floats explicitly, as implicit coercion of
+            // NAN emits a warning on PHP 8.5.
+            if (is_float($value) && !is_finite($value)) {
+                $value = is_nan($value) ? 'NAN' : ($value > 0 ? 'INF' : '-INF');
+            }
             $trimmed = trim((string) $value, " \t");
             $this->assertValue($trimmed);
             return $trimmed;

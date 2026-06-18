@@ -4,7 +4,7 @@ Tags: google calendar, events, website calendar, wp calendar, wp calendar widget
 Requires at least: 4.2
 Requires PHP: 8.1
 Tested up to: 7.0
-Stable tag: 4.0.4
+Stable tag: 4.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,7 +97,10 @@ We'd love your help! Here's a few things you can do:
 
 == Changelog ==
 
-= 4.0.3 =
+= 4.0.5 =
+* Fix: Fixed a PHP 8.3 ValueError by replacing sprintf() with string concatenation to safely handle literal percent signs in translations.
+
+= 4.0.4 =
 * Fix: Fixed text domain loading by hooking into init.
 * Dev: Added validation before unserialize() to prevent errors during OAuth failures.
 

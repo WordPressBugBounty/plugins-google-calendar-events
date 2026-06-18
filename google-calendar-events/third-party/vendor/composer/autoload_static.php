@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit554447cbc67fca3d094c47de911e8105
+class ComposerStaticInit7dd05667af671ab2975af627120fb8d7
 {
     public static $files = array (
         '4b1964b006cd3cb15789beb45368cd67' => __DIR__ . '/../..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -351,10 +351,12 @@ class ComposerStaticInit554447cbc67fca3d094c47de911e8105
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\CurlHandler' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/CurlHandler.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\CurlMultiHandler' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\CurlShareHandleState' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/CurlShareHandleState.php',
+        'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\CurlVersion' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/CurlVersion.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\EasyHandle' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/EasyHandle.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\HeaderProcessor' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/HeaderProcessor.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\MockHandler' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/MockHandler.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\Proxy' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/Proxy.php',
+        'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\ProxyEnvironment' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/ProxyEnvironment.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\StreamHandler' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/StreamHandler.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\MessageFormatter' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/MessageFormatter.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\MessageFormatterInterface' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/MessageFormatterInterface.php',
@@ -665,7 +667,7 @@ class ComposerStaticInit554447cbc67fca3d094c47de911e8105
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit554447cbc67fca3d094c47de911e8105::$classMap;
+            $loader->classMap = ComposerStaticInit7dd05667af671ab2975af627120fb8d7::$classMap;
 
         }, null, ClassLoader::class);
     }
