@@ -189,17 +189,19 @@ class CurlFactory implements CurlFactoryInterface
             return;
         }
         $conflictingOptions = self::conflictingCurlOptions();
+        $sinceOverrides = self::conflictingCurlOptionSinceOverrides();
         foreach ($options['curl'] as $option => $_) {
             if (!\array_key_exists($option, $conflictingOptions)) {
                 continue;
             }
             $name = self::formatCurlOption($option);
             $replacement = $conflictingOptions[$option];
+            $since = $sinceOverrides[$option] ?? '7.11';
             if ($replacement !== null) {
-                \SimpleCalendar\plugin_deps\trigger_deprecation('guzzlehttp/guzzle', '7.11', \sprintf('Passing %s in the "curl" request option is deprecated; guzzlehttp/guzzle 8.0 will reject this option because it conflicts with Guzzle-managed request handling. Use %s instead.', $name, $replacement));
+                \SimpleCalendar\plugin_deps\trigger_deprecation('guzzlehttp/guzzle', $since, \sprintf('Passing %s in the "curl" request option is deprecated; guzzlehttp/guzzle 8.0 will reject this option because it conflicts with Guzzle-managed request handling. Use %s instead.', $name, $replacement));
                 continue;
             }
-            \SimpleCalendar\plugin_deps\trigger_deprecation('guzzlehttp/guzzle', '7.11', \sprintf('Passing %s in the "curl" request option is deprecated; guzzlehttp/guzzle 8.0 will reject this option because it conflicts with Guzzle-managed cURL internals.', $name));
+            \SimpleCalendar\plugin_deps\trigger_deprecation('guzzlehttp/guzzle', $since, \sprintf('Passing %s in the "curl" request option is deprecated; guzzlehttp/guzzle 8.0 will reject this option because it conflicts with Guzzle-managed cURL internals.', $name));
         }
     }
     private static function triggerUnsupportedCurlOptionDeprecations(array $options): void
@@ -265,6 +267,7 @@ class CurlFactory implements CurlFactoryInterface
         self::addConflictingCurlOption($options, 'CURLOPT_STDERR', 'the "debug" request option');
         self::addConflictingCurlOption($options, 'CURLOPT_PROXY', 'the "proxy" request option');
         self::addConflictingCurlOption($options, 'CURLOPT_NOPROXY', 'the "proxy" request option');
+        self::addConflictingCurlOption($options, 'CURLOPT_PROXYTYPE', 'the "proxy" request option with a scheme-prefixed URL');
         self::addConflictingCurlOption($options, 'CURLOPT_FOLLOWLOCATION', 'the "allow_redirects" request option');
         self::addConflictingCurlOption($options, 'CURLOPT_MAXREDIRS', 'the "allow_redirects" request option');
         self::addConflictingCurlOption($options, 'CURLOPT_POSTREDIR', 'the "allow_redirects" request option');
@@ -291,6 +294,21 @@ class CurlFactory implements CurlFactoryInterface
         self::addConflictingCurlOption($options, 'CURLOPT_COOKIEJAR', 'Guzzle cookie middleware');
         self::addConflictingCurlOption($options, 'CURLOPT_COOKIELIST', 'Guzzle cookie middleware');
         self::addConflictingCurlOption($options, 'CURLOPT_COOKIESESSION', 'Guzzle cookie middleware');
+        return $options;
+    }
+    /**
+     * @return array<int, string>
+     */
+    private static function conflictingCurlOptionSinceOverrides(): array
+    {
+        static $options = null;
+        if ($options !== null) {
+            return $options;
+        }
+        $options = [];
+        if (\defined('CURLOPT_PROXYTYPE')) {
+            $options[\CURLOPT_PROXYTYPE] = '7.12';
+        }
         return $options;
     }
     /**
@@ -527,6 +545,11 @@ class CurlFactory implements CurlFactoryInterface
         $proxy = $conf[\CURLOPT_PROXY];
         return \is_string($proxy) && $proxy !== '' ? $proxy : null;
     }
+    private static function proxyScheme(string $proxy): ?string
+    {
+        $position = \strpos($proxy, '://');
+        return $position === \false ? null : \strtolower(\substr($proxy, 0, $position));
+    }
     /**
      * @return array<int|string, mixed>
      */
@@ -691,9 +714,9 @@ class CurlFactory implements CurlFactoryInterface
                 }
             }
         }
-        if (!isset($options['curl'][\CURLOPT_ENCODING]) && !empty($options['decode_content'])) {
+        if (!isset($options['curl'][\CURLOPT_ENCODING]) && isset($options['decode_content']) && $options['decode_content'] !== \false) {
             $accept = $easy->request->getHeaderLine('Accept-Encoding');
-            if ($accept) {
+            if ($accept !== '') {
                 $conf[\CURLOPT_ENCODING] = $accept;
             } else {
                 // The empty string enables all available decoders and implicitly
@@ -775,6 +798,24 @@ class CurlFactory implements CurlFactoryInterface
                 // the installed libcurl's matcher.
                 $proxyConf = '';
                 $noProxyConf = '*';
+            }
+        }
+        if (\is_string($proxyConf) && $proxyConf !== '') {
+            $scheme = self::proxyScheme($proxyConf);
+            if ($scheme !== null && \preg_match('/^[a-z][a-z0-9.+-]*$/D', $scheme) !== 1) {
+                // A "://" with a prefix that is not a valid scheme (leading
+                // junk such as a space or non-breaking space) is treated by
+                // libcurl as an unknown scheme and silently downgraded to a
+                // plaintext HTTP proxy. Fail closed before any bytes reach the
+                // wire.
+                throw new RequestException('The proxy URL is malformed.', $easy->request);
+            }
+            if ($scheme === 'https' && !CurlVersion::supportsHttpsProxy()) {
+                // libcurl before 7.50.2 silently downgrades an https:// proxy
+                // to a plaintext HTTP proxy; 7.50.2 through 7.51, and builds
+                // without HTTPS-proxy support, fail at connect time. Fail
+                // closed before any bytes reach the wire.
+                throw new RequestException('HTTPS proxies are not supported by the installed libcurl; libcurl 7.52.0 or newer built with HTTPS-proxy support is required.', $easy->request);
             }
         }
         $conf[\CURLOPT_PROXY] = $proxyConf;
