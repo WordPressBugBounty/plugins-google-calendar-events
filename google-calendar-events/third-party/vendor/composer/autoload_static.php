@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit26bc2abc725c21585a9cdff8623bd97b
+class ComposerStaticInit8c5ebb6b3a77d27c160f33214dda3f7a
 {
     public static $files = array (
         '4b1964b006cd3cb15789beb45368cd67' => __DIR__ . '/../..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -61,7 +61,7 @@ class ComposerStaticInit26bc2abc725c21585a9cdff8623bd97b
         'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\LazyMessageFormatter' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/MessageFormatter/MessageFormatterMapperWeakType.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\MessageFormatterMapper' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/MessageFormatter/MessageFormatterMapper.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractMacro' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/AbstractMacro.php',
-        'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractReflectionMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/AbstractMacroStatic.php',
+        'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractReflectionMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/AbstractMacroBuiltin.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\LazyMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/MacroStrongType.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\Macro' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/Macro.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\MacroExtension' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/MacroExtension.php',
@@ -354,13 +354,16 @@ class ComposerStaticInit26bc2abc725c21585a9cdff8623bd97b
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\CurlVersion' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/CurlVersion.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\EasyHandle' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/EasyHandle.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\HeaderProcessor' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/HeaderProcessor.php',
+        'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\HostValidator' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/HostValidator.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\MockHandler' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/MockHandler.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\Proxy' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/Proxy.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\ProxyEnvironment' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/ProxyEnvironment.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\StreamHandler' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/StreamHandler.php',
+        'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Handler\\TlsVersion' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Handler/TlsVersion.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\MessageFormatter' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/MessageFormatter.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\MessageFormatterInterface' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/MessageFormatterInterface.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Middleware' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Middleware.php',
+        'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Multiplexing' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Multiplexing.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Pool' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/Pool.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\PrepareBodyMiddleware' => __DIR__ . '/../..' . '/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Promise\\AggregateException' => __DIR__ . '/../..' . '/guzzlehttp/promises/src/AggregateException.php',
@@ -667,7 +670,7 @@ class ComposerStaticInit26bc2abc725c21585a9cdff8623bd97b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit26bc2abc725c21585a9cdff8623bd97b::$classMap;
+            $loader->classMap = ComposerStaticInit8c5ebb6b3a77d27c160f33214dda3f7a::$classMap;
 
         }, null, ClassLoader::class);
     }

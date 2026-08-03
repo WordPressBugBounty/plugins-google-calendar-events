@@ -4,7 +4,7 @@ Tags: google calendar, events, website calendar, wp calendar, wp calendar widget
 Requires at least: 4.2
 Requires PHP: 8.1
 Tested up to: 7.0
-Stable tag: 4.0.7
+Stable tag: 4.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +96,11 @@ We'd love your help! Here's a few things you can do:
 8. Attach a calendar to a post or page
 
 == Changelog ==
+
+= 4.1.0 =
+* Dev: ICS Feed Upload: Added support for importing local `.ics` files to import calendar events.
+* Dev: ICS Event Export: Added the ability to download/export calendar events as a static `.ics` file.
+* Fix: Print issue fixed: An issue where clicking the Print button on secondary calendar instances on the same page was unresponsive.
 
 = 4.0.7 =
 * Fix: Removed unnecessary Google API key/OAuth requirement when creating a Grouped Calendar.

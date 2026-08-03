@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit85456628cc107c8d9411e10c262634e2
+class ComposerStaticInit8c2ae42bdd045eb5ae24ba1444327faa
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -60,9 +60,12 @@ class ComposerStaticInit85456628cc107c8d9411e10c262634e2
         'SimpleCalendar\\Events\\Events' => __DIR__ . '/../..' . '/events/events.php',
         'SimpleCalendar\\Feeds\\Admin\\Google_Admin' => __DIR__ . '/../..' . '/feeds/admin/google-admin.php',
         'SimpleCalendar\\Feeds\\Admin\\Grouped_Calendars_Admin' => __DIR__ . '/../..' . '/feeds/admin/grouped-calendars-admin.php',
+        'SimpleCalendar\\Feeds\\Admin\\Ics_Feed_Admin' => __DIR__ . '/../..' . '/feeds/admin/ics-feed-admin.php',
         'SimpleCalendar\\Feeds\\Auth_Service_Helpers' => __DIR__ . '/../..' . '/oauthhelper/class-oauth-service.php',
         'SimpleCalendar\\Feeds\\Google' => __DIR__ . '/../..' . '/feeds/google.php',
         'SimpleCalendar\\Feeds\\Grouped_Calendars' => __DIR__ . '/../..' . '/feeds/grouped-calendars.php',
+        'SimpleCalendar\\Feeds\\Ics_Feed' => __DIR__ . '/../..' . '/feeds/ics-feed.php',
+        'SimpleCalendar\\Ics_Export' => __DIR__ . '/../..' . '/ics-export.php',
         'SimpleCalendar\\Installation' => __DIR__ . '/../..' . '/installation.php',
         'SimpleCalendar\\Objects' => __DIR__ . '/../..' . '/objects.php',
         'SimpleCalendar\\Plugin' => __DIR__ . '/../..' . '/main.php',
@@ -80,7 +83,7 @@ class ComposerStaticInit85456628cc107c8d9411e10c262634e2
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit85456628cc107c8d9411e10c262634e2::$classMap;
+            $loader->classMap = ComposerStaticInit8c2ae42bdd045eb5ae24ba1444327faa::$classMap;
 
         }, null, ClassLoader::class);
     }
