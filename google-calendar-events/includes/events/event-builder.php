@@ -850,6 +850,11 @@ class Event_Builder
 				'</span>' .
 				$time_start .
 				$time_end;
+
+			// Single-day all-day events still need endDate for Event schema.
+			if ($event->whole_day && $end instanceof Carbon && empty($time_end)) {
+				$output .= '<meta itemprop="endDate" content="' . esc_attr($end_iso) . '" />';
+			}
 		}
 
 		return trim($output);
@@ -988,9 +993,12 @@ class Event_Builder
 		 */
 		$additional_link_atts = apply_filters('simcal_additional_event_link_attributes', '', $attr);
 
+		// esc_url() strips percent-encoded non-ASCII octets; use esc_attr() for gcal links.
+		$href = 'add-to-gcal-link' === $tag ? esc_attr($url) : esc_url($url);
+
 		return false !== $anchor
 			? ' <a href="' .
-					esc_url($url) .
+					$href .
 					'" ' .
 					wp_kses_post($target) .
 					' ' .

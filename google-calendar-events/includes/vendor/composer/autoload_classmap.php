@@ -56,6 +56,7 @@ return array(
     'SimpleCalendar\\Calendars\\Views\\Default_Calendar_List' => $baseDir . '/calendars/views/default-calendar-list.php',
     'SimpleCalendar\\Events\\Event' => $baseDir . '/events/event.php',
     'SimpleCalendar\\Events\\Event_Builder' => $baseDir . '/events/event-builder.php',
+    'SimpleCalendar\\Events\\Event_Schema' => $baseDir . '/events/event-schema.php',
     'SimpleCalendar\\Events\\Events' => $baseDir . '/events/events.php',
     'SimpleCalendar\\Feeds\\Admin\\Google_Admin' => $baseDir . '/feeds/admin/google-admin.php',
     'SimpleCalendar\\Feeds\\Admin\\Grouped_Calendars_Admin' => $baseDir . '/feeds/admin/grouped-calendars-admin.php',

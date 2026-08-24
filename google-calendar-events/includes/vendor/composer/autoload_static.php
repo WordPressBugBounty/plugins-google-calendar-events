@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8c2ae42bdd045eb5ae24ba1444327faa
+class ComposerStaticInit01e0c4e904ddd293e264b0efa5478e4f
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -57,6 +57,7 @@ class ComposerStaticInit8c2ae42bdd045eb5ae24ba1444327faa
         'SimpleCalendar\\Calendars\\Views\\Default_Calendar_List' => __DIR__ . '/../..' . '/calendars/views/default-calendar-list.php',
         'SimpleCalendar\\Events\\Event' => __DIR__ . '/../..' . '/events/event.php',
         'SimpleCalendar\\Events\\Event_Builder' => __DIR__ . '/../..' . '/events/event-builder.php',
+        'SimpleCalendar\\Events\\Event_Schema' => __DIR__ . '/../..' . '/events/event-schema.php',
         'SimpleCalendar\\Events\\Events' => __DIR__ . '/../..' . '/events/events.php',
         'SimpleCalendar\\Feeds\\Admin\\Google_Admin' => __DIR__ . '/../..' . '/feeds/admin/google-admin.php',
         'SimpleCalendar\\Feeds\\Admin\\Grouped_Calendars_Admin' => __DIR__ . '/../..' . '/feeds/admin/grouped-calendars-admin.php',
@@ -83,7 +84,7 @@ class ComposerStaticInit8c2ae42bdd045eb5ae24ba1444327faa
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit8c2ae42bdd045eb5ae24ba1444327faa::$classMap;
+            $loader->classMap = ComposerStaticInit01e0c4e904ddd293e264b0efa5478e4f::$classMap;
 
         }, null, ClassLoader::class);
     }

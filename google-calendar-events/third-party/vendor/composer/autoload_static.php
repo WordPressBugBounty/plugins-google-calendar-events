@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8c5ebb6b3a77d27c160f33214dda3f7a
+class ComposerStaticInitf6eb5194b39856bf7e14886ea6008a90
 {
     public static $files = array (
         '4b1964b006cd3cb15789beb45368cd67' => __DIR__ . '/../..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -61,7 +61,7 @@ class ComposerStaticInit8c5ebb6b3a77d27c160f33214dda3f7a
         'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\LazyMessageFormatter' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/MessageFormatter/MessageFormatterMapperWeakType.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\MessageFormatterMapper' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/MessageFormatter/MessageFormatterMapper.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractMacro' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/AbstractMacro.php',
-        'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractReflectionMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/AbstractMacroBuiltin.php',
+        'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractReflectionMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/AbstractMacroStatic.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\LazyMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/MacroStrongType.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\Macro' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/Macro.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\MacroExtension' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/MacroExtension.php',
@@ -670,7 +670,7 @@ class ComposerStaticInit8c5ebb6b3a77d27c160f33214dda3f7a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit8c5ebb6b3a77d27c160f33214dda3f7a::$classMap;
+            $loader->classMap = ComposerStaticInitf6eb5194b39856bf7e14886ea6008a90::$classMap;
 
         }, null, ClassLoader::class);
     }
