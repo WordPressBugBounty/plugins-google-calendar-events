@@ -4,7 +4,7 @@ Tags: google calendar, events, website calendar, wp calendar, wp calendar widget
 Requires at least: 4.2
 Requires PHP: 8.1
 Tested up to: 7.0
-Stable tag: 4.2.0
+Stable tag: 4.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -96,6 +96,9 @@ We'd love your help! Here's a few things you can do:
 8. Attach a calendar to a post or page
 
 == Changelog ==
+
+= 4.2.1 =
+* Fix: Resolved timezone handling issues for all-day events in ICS feeds.
 
 = 4.2.0 =
 * Dev: Add option to automatically display List View on mobile devices when the screen width is below 768px when Grid View is selected as the default view.
