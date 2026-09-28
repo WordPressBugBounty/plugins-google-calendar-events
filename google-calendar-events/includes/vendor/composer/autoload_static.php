@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7220ea8af7fc13c2db9e072573e3b627
+class ComposerStaticInita36f6c4cd8cefef1737e8ddfacd0f0b3
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -34,6 +34,7 @@ class ComposerStaticInit7220ea8af7fc13c2db9e072573e3b627
         'SimpleCalendar\\Admin\\Metaboxes\\Attach_Calendar' => __DIR__ . '/../..' . '/admin/metaboxes/attach-calendar.php',
         'SimpleCalendar\\Admin\\Metaboxes\\Get_Shortcode' => __DIR__ . '/../..' . '/admin/metaboxes/get-shortcode.php',
         'SimpleCalendar\\Admin\\Metaboxes\\Newsletter' => __DIR__ . '/../..' . '/admin/metaboxes/newsletter.php',
+        'SimpleCalendar\\Admin\\Metaboxes\\Sc_Event_Details' => __DIR__ . '/../..' . '/admin/metaboxes/sc-event-details.php',
         'SimpleCalendar\\Admin\\Metaboxes\\Settings' => __DIR__ . '/../..' . '/admin/metaboxes/settings.php',
         'SimpleCalendar\\Admin\\Metaboxes\\Upgrade_To_Premium' => __DIR__ . '/../..' . '/admin/metaboxes/upgrade-to-premium.php',
         'SimpleCalendar\\Admin\\Notice' => __DIR__ . '/../..' . '/admin/notice.php',
@@ -62,10 +63,13 @@ class ComposerStaticInit7220ea8af7fc13c2db9e072573e3b627
         'SimpleCalendar\\Feeds\\Admin\\Google_Admin' => __DIR__ . '/../..' . '/feeds/admin/google-admin.php',
         'SimpleCalendar\\Feeds\\Admin\\Grouped_Calendars_Admin' => __DIR__ . '/../..' . '/feeds/admin/grouped-calendars-admin.php',
         'SimpleCalendar\\Feeds\\Admin\\Ics_Feed_Admin' => __DIR__ . '/../..' . '/feeds/admin/ics-feed-admin.php',
+        'SimpleCalendar\\Feeds\\Admin\\Sc_Event_Admin' => __DIR__ . '/../..' . '/feeds/admin/sc-event-admin.php',
         'SimpleCalendar\\Feeds\\Auth_Service_Helpers' => __DIR__ . '/../..' . '/oauthhelper/class-oauth-service.php',
         'SimpleCalendar\\Feeds\\Google' => __DIR__ . '/../..' . '/feeds/google.php',
         'SimpleCalendar\\Feeds\\Grouped_Calendars' => __DIR__ . '/../..' . '/feeds/grouped-calendars.php',
         'SimpleCalendar\\Feeds\\Ics_Feed' => __DIR__ . '/../..' . '/feeds/ics-feed.php',
+        'SimpleCalendar\\Feeds\\Sc_Event' => __DIR__ . '/../..' . '/feeds/sc-event.php',
+        'SimpleCalendar\\Frontend\\Sc_Event_Single' => __DIR__ . '/../..' . '/frontend/sc-event-single.php',
         'SimpleCalendar\\Ics_Export' => __DIR__ . '/../..' . '/ics-export.php',
         'SimpleCalendar\\Installation' => __DIR__ . '/../..' . '/installation.php',
         'SimpleCalendar\\Objects' => __DIR__ . '/../..' . '/objects.php',
@@ -84,7 +88,7 @@ class ComposerStaticInit7220ea8af7fc13c2db9e072573e3b627
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit7220ea8af7fc13c2db9e072573e3b627::$classMap;
+            $loader->classMap = ComposerStaticInita36f6c4cd8cefef1737e8ddfacd0f0b3::$classMap;
 
         }, null, ClassLoader::class);
     }
