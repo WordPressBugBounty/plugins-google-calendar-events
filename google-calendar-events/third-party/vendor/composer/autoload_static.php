@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7b4aba47a2331128b62a79fdaff4997a
+class ComposerStaticInitc2fc2dc8d5563f0e93bfe8b7237df564
 {
     public static $files = array (
         '4b1964b006cd3cb15789beb45368cd67' => __DIR__ . '/../..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -58,11 +58,11 @@ class ComposerStaticInit7b4aba47a2331128b62a79fdaff4997a
         'SimpleCalendar\\plugin_deps\\Carbon\\Language' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/Language.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\Laravel\\ServiceProvider' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\LazyTranslator' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/TranslatorStrongType.php',
-        'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\LazyMessageFormatter' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/MessageFormatter/MessageFormatterMapperWeakType.php',
+        'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\LazyMessageFormatter' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/MessageFormatter/MessageFormatterMapperStrongType.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\MessageFormatter\\MessageFormatterMapper' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/MessageFormatter/MessageFormatterMapper.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractMacro' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/AbstractMacro.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\AbstractReflectionMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/AbstractMacroBuiltin.php',
-        'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\LazyMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/MacroStrongType.php',
+        'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\LazyMacro' => __DIR__ . '/../..' . '/nesbot/carbon/lazy/Carbon/PHPStan/MacroWeakType.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\Macro' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/Macro.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\MacroExtension' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/MacroExtension.php',
         'SimpleCalendar\\plugin_deps\\Carbon\\PHPStan\\MacroScanner' => __DIR__ . '/../..' . '/nesbot/carbon/src/Carbon/PHPStan/MacroScanner.php',
@@ -379,6 +379,7 @@ class ComposerStaticInit7b4aba47a2331128b62a79fdaff4997a
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Promise\\PromisorInterface' => __DIR__ . '/../..' . '/guzzlehttp/promises/src/PromisorInterface.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Promise\\RejectedPromise' => __DIR__ . '/../..' . '/guzzlehttp/promises/src/RejectedPromise.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Promise\\RejectionException' => __DIR__ . '/../..' . '/guzzlehttp/promises/src/RejectionException.php',
+        'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Promise\\State' => __DIR__ . '/../..' . '/guzzlehttp/promises/src/State.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Promise\\TaskQueue' => __DIR__ . '/../..' . '/guzzlehttp/promises/src/TaskQueue.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Promise\\TaskQueueInterface' => __DIR__ . '/../..' . '/guzzlehttp/promises/src/TaskQueueInterface.php',
         'SimpleCalendar\\plugin_deps\\GuzzleHttp\\Promise\\Utils' => __DIR__ . '/../..' . '/guzzlehttp/promises/src/Utils.php',
@@ -670,7 +671,7 @@ class ComposerStaticInit7b4aba47a2331128b62a79fdaff4997a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit7b4aba47a2331128b62a79fdaff4997a::$classMap;
+            $loader->classMap = ComposerStaticInitc2fc2dc8d5563f0e93bfe8b7237df564::$classMap;
 
         }, null, ClassLoader::class);
     }
