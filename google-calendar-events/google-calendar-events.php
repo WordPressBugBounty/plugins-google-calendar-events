@@ -5,7 +5,7 @@
  * Description: Display Google Calendar events on your WordPress site in real-time synchronization. Fully customizable and 100% mobile responsive.
  * Author:      Simple Calendar
  * Author URI:  https://simplecalendar.io
- * Version:    4.3.3
+ * Version:    4.3.4
  * Text Domain: google-calendar-events
  * Domain Path: /i18n
  * License: GPLv2 or later
@@ -23,7 +23,7 @@ if (!defined('ABSPATH')) {
 $this_plugin_path = trailingslashit(dirname(__FILE__));
 $this_plugin_dir = plugin_dir_url(__FILE__);
 $this_plugin_constants = [
-	'SIMPLE_CALENDAR_VERSION' => '4.3.3',
+	'SIMPLE_CALENDAR_VERSION' => '4.3.4',
 	'SIMPLE_CALENDAR_MAIN_FILE' => __FILE__,
 	'SIMPLE_CALENDAR_URL' => $this_plugin_dir,
 	'SIMPLE_CALENDAR_ASSETS' => $this_plugin_dir . 'assets/',

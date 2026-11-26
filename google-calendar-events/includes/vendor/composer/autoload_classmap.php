@@ -28,6 +28,7 @@ return array(
     'SimpleCalendar\\Admin\\Fields\\Select' => $baseDir . '/admin/fields/select.php',
     'SimpleCalendar\\Admin\\Fields\\Standard' => $baseDir . '/admin/fields/standard.php',
     'SimpleCalendar\\Admin\\Fields\\Textarea' => $baseDir . '/admin/fields/textarea.php',
+    'SimpleCalendar\\Admin\\License_Manager' => $baseDir . '/admin/license-manager.php',
     'SimpleCalendar\\Admin\\Menus' => $baseDir . '/admin/menus.php',
     'SimpleCalendar\\Admin\\Meta_Boxes' => $baseDir . '/admin/meta-boxes.php',
     'SimpleCalendar\\Admin\\Metaboxes\\Attach_Calendar' => $baseDir . '/admin/metaboxes/attach-calendar.php',

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5f373d91a51b0354e747a5e3eae25c43
+class ComposerStaticInit239cd95f4e4fbba19445d4fb34236d7b
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -29,6 +29,7 @@ class ComposerStaticInit5f373d91a51b0354e747a5e3eae25c43
         'SimpleCalendar\\Admin\\Fields\\Select' => __DIR__ . '/../..' . '/admin/fields/select.php',
         'SimpleCalendar\\Admin\\Fields\\Standard' => __DIR__ . '/../..' . '/admin/fields/standard.php',
         'SimpleCalendar\\Admin\\Fields\\Textarea' => __DIR__ . '/../..' . '/admin/fields/textarea.php',
+        'SimpleCalendar\\Admin\\License_Manager' => __DIR__ . '/../..' . '/admin/license-manager.php',
         'SimpleCalendar\\Admin\\Menus' => __DIR__ . '/../..' . '/admin/menus.php',
         'SimpleCalendar\\Admin\\Meta_Boxes' => __DIR__ . '/../..' . '/admin/meta-boxes.php',
         'SimpleCalendar\\Admin\\Metaboxes\\Attach_Calendar' => __DIR__ . '/../..' . '/admin/metaboxes/attach-calendar.php',
@@ -88,7 +89,7 @@ class ComposerStaticInit5f373d91a51b0354e747a5e3eae25c43
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit5f373d91a51b0354e747a5e3eae25c43::$classMap;
+            $loader->classMap = ComposerStaticInit239cd95f4e4fbba19445d4fb34236d7b::$classMap;
 
         }, null, ClassLoader::class);
     }
